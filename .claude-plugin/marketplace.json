@@ -1,0 +1,51 @@
+{
+  "name": "strategic-frameworks",
+  "owner": {
+    "name": "CampusAI",
+    "email": "info@campus.ai"
+  },
+  "metadata": {
+    "description": "Agent Skills for Claude AI that help you choose and apply proven strategic frameworks for decision-making, problem-solving, and strategic thinking. 48 proven frameworks across 8 categories.",
+    "version": "1.0.0",
+    "changelog": "https://github.com/Przemocny/strategic-frameworks/blob/main/CHANGELOG.md",
+    "documentation": "https://github.com/Przemocny/strategic-frameworks#readme",
+    "contributing": "https://github.com/Przemocny/strategic-frameworks/blob/main/.github/CONTRIBUTING.md"
+  },
+  "plugins": [
+    {
+      "name": "strategic-frameworks",
+      "description": "Master strategic thinking with 48 proven frameworks. Choose the right framework for your situation (choose-framework), apply it through facilitated workshops (use-framework), and discover new frameworks to expand the system (discover-framework). From mental models to strategic analysis, unlock structured decision-making.",
+      "version": "1.0.0",
+      "author": {
+        "name": "CampusAI",
+        "email": "info@campus.ai"
+      },
+      "homepage": "https://github.com/Przemocny/strategic-frameworks",
+      "repository": "https://github.com/Przemocny/strategic-frameworks",
+      "license": "Apache-2.0",
+      "keywords": [
+        "strategic-thinking",
+        "decision-frameworks",
+        "mental-models",
+        "business-strategy",
+        "facilitation",
+        "problem-solving",
+        "strategic-analysis",
+        "framework-selection",
+        "design-thinking",
+        "lean-startup",
+        "porter-five-forces",
+        "okr",
+        "change-management"
+      ],
+      "category": "productivity",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/choose-framework",
+        "./skills/use-framework",
+        "./skills/discover-framework"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# Claude local settings
+.claude/
+
+# OS files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# User framework outputs (optional - users may want to commit these)
+.frameworks-output/
+
+# Research and development files
+.research/
