@@ -1,7 +1,5 @@
 # Strategic Frameworks
 
-> *Formerly known as MetaFrameworks - [See rebranding details](REBRANDING.md)*
-
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Claude Skills](https://img.shields.io/badge/Claude-Agent_Skills-purple)](https://agentskills.io)
 [![CampusAI](https://img.shields.io/badge/Made_by-CampusAI-orange)](https://campus.ai)
