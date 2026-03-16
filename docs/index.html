@@ -434,9 +434,15 @@
         }
         .skill:hover { border-color: var(--red); background: rgba(229, 57, 53, 0.08); }
         .skill-icon {
-            font-size: 16px;
             flex-shrink: 0;
             width: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .skill-icon svg {
+            width: 16px;
+            height: 16px;
             text-align: center;
         }
         .skill-name {
@@ -651,8 +657,13 @@
             padding: 24px 32px;
         }
         .workflow-step-icon {
-            font-size: 28px;
             margin-bottom: 8px;
+            display: flex;
+            justify-content: center;
+        }
+        .workflow-step-icon svg {
+            width: 28px;
+            height: 28px;
         }
         .workflow-step-name {
             font-family: var(--font-mono);
@@ -989,25 +1000,25 @@ function closeMobileMenu() {
 
     <div class="workflow">
         <div class="workflow-step">
-            <div class="workflow-step-icon">&#128172;</div>
+            <div class="workflow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
             <div class="workflow-step-name">Describe problem</div>
             <div class="workflow-step-desc">Tell the AI what you're facing</div>
         </div>
         <div class="workflow-arrow">&#8594;</div>
         <div class="workflow-step">
-            <div class="workflow-step-icon">&#127919;</div>
+            <div class="workflow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
             <div class="workflow-step-name">choose-framework</div>
             <div class="workflow-step-desc">10-20 min exploratory dialogue</div>
         </div>
         <div class="workflow-arrow">&#8594;</div>
         <div class="workflow-step">
-            <div class="workflow-step-icon">&#128736;</div>
+            <div class="workflow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
             <div class="workflow-step-name">use-framework</div>
             <div class="workflow-step-desc">30-60 min guided workshop</div>
         </div>
         <div class="workflow-arrow">&#8594;</div>
         <div class="workflow-step">
-            <div class="workflow-step-icon">&#128161;</div>
+            <div class="workflow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
             <div class="workflow-step-name">Insights</div>
             <div class="workflow-step-desc">Documented recommendations</div>
         </div>
@@ -1040,15 +1051,15 @@ function closeMobileMenu() {
     <p class="section-subtitle section-subtitle--dark">Select the right framework, apply it through facilitated workshop dialogue, or research and add new frameworks to the library.</p>
     <div class="skills-grid">
         <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/choose-framework/SKILL.md">
-            <span class="skill-icon">&#127919;</span>
+            <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
             <span><span class="skill-name">/choose-framework</span><br><span class="skill-desc">Select the right framework for your situation through exploratory dialogue</span></span>
         </a>
         <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/use-framework/SKILL.md">
-            <span class="skill-icon">&#128736;</span>
+            <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
             <span><span class="skill-name">/use-framework</span><br><span class="skill-desc">Apply framework step-by-step through facilitated workshop dialogue</span></span>
         </a>
         <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/discover-framework/SKILL.md">
-            <span class="skill-icon">&#128269;</span>
+            <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
             <span><span class="skill-name">/discover-framework</span><br><span class="skill-desc">Research and add new frameworks to the system</span></span>
         </a>
     </div>
