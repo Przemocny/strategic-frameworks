@@ -37,7 +37,7 @@
         }
         a { color: inherit; text-decoration: none; }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 120px; }
+        .container { max-width: 1440px; margin: 0 auto; padding: 0 120px; }
         @media (max-width: 900px) { .container { padding: 0 24px; } }
 
         /* ── Header ── */
@@ -116,19 +116,29 @@
             height: 400px;
             border-radius: 50%;
             background: var(--red);
-            opacity: 0.08;
+            opacity: 0.15;
             top: -80px;
             right: -40px;
         }
         .hero-geo-2 {
             position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--blue);
+            opacity: 0.12;
+            top: 350px;
+            right: 200px;
+            transform: rotate(15deg);
+        }
+        .hero-geo-3 {
+            position: absolute;
             width: 250px;
             height: 250px;
             background: var(--yellow);
-            opacity: 0.06;
+            opacity: 0.1;
             bottom: -60px;
-            left: -40px;
-            transform: rotate(15deg);
+            left: -50px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
         }
         .hero-grid {
             position: relative;
@@ -138,7 +148,7 @@
             gap: 64px;
             align-items: start;
         }
-        .hero-left { max-width: 560px; }
+        .hero-left { max-width: 700px; }
         .hero-badge {
             display: inline-block;
             padding: 6px 16px;
@@ -152,19 +162,21 @@
             margin-bottom: 32px;
         }
         .hero h1 {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 700;
             letter-spacing: -2px;
             line-height: 1.1;
             color: var(--text-on-dark);
             margin-bottom: 24px;
+            max-width: 700px;
         }
         .hero h1 span { color: var(--red); }
         .hero .tagline {
-            font-size: 18px;
+            font-size: 20px;
             color: #BBBBBB;
             line-height: 1.5;
             margin-bottom: 16px;
+            max-width: 650px;
         }
         .hero .agents {
             font-family: var(--font-mono);
@@ -367,6 +379,17 @@
             margin-bottom: 48px;
             max-width: 900px;
         }
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 800px;
+            margin-bottom: 48px;
+            margin-top: -24px;
+        }
+        .section-subtitle--dark {
+            color: #BBBBBB;
+        }
         .section-title--white { color: var(--text-on-dark); }
 
         /* ── Features grid ── */
@@ -390,7 +413,7 @@
         .feature-desc {
             font-size: 16px;
             color: var(--text-secondary);
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* ── Skills grid ── */
@@ -474,7 +497,7 @@
         .scenario-desc {
             font-size: 14px;
             color: var(--text-secondary);
-            line-height: 1.5;
+            line-height: 1.6;
             margin-bottom: 20px;
         }
         .scenario-steps {
@@ -570,7 +593,8 @@
             text-transform: uppercase;
         }
         .category-frameworks {
-            font-size: 13px;
+            font-family: var(--font-mono);
+            font-size: 12px;
             color: #888;
             line-height: 1.6;
         }
@@ -666,6 +690,16 @@
             opacity: 0.08;
             top: -100px;
             right: -60px;
+        }
+        .final-cta-geo-2 {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: var(--yellow);
+            opacity: 0.1;
+            bottom: -80px;
+            left: -80px;
+            transform: rotate(20deg);
         }
         .final-cta h2 {
             font-size: 44px;
@@ -784,7 +818,7 @@
             .header-nav { display: none; }
             .mobile-toggle { display: block; }
             .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-            .hero h1 { font-size: 36px; }
+            .hero h1 { font-size: 36px; max-width: 100%; }
             .section-title { font-size: 32px; }
             .features, .skills-grid, .scenarios-grid, .categories-grid { grid-template-columns: 1fr; }
             .stats { flex-direction: column; }
@@ -830,6 +864,7 @@
 <section class="hero">
     <div class="hero-geo-1"></div>
     <div class="hero-geo-2"></div>
+    <div class="hero-geo-3"></div>
     <div class="hero-grid">
         <div class="hero-left">
             <div class="hero-badge">Claude Agent Skills</div>
@@ -950,6 +985,7 @@ function closeMobileMenu() {
 <section class="section section--light" id="workflow">
     <div class="section-label"><span class="section-label-dot"></span> HOW IT WORKS</div>
     <h2 class="section-title">Describe your problem.<br>Get structured insights.</h2>
+    <p class="section-subtitle">All three skills follow a facilitative 4-phase workflow. You bring context and judgment &mdash; the skill brings structure and questions.</p>
 
     <div class="workflow">
         <div class="workflow-step">
@@ -1001,6 +1037,7 @@ function closeMobileMenu() {
 <section class="section section--dark" id="skills">
     <div class="section-label section-label--light" style="color: #666;"><span class="section-label-dot"></span> CORE SKILLS</div>
     <h2 class="section-title section-title--white">3 skills. One system.<br>Structured thinking on demand.</h2>
+    <p class="section-subtitle section-subtitle--dark">Select the right framework, apply it through facilitated workshop dialogue, or research and add new frameworks to the library.</p>
     <div class="skills-grid">
         <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/choose-framework/SKILL.md">
             <span class="skill-icon">&#127919;</span>
@@ -1021,6 +1058,7 @@ function closeMobileMenu() {
 <section class="section section--dark" id="frameworks" style="padding-top: 0;">
     <div class="section-label section-label--light" style="color: #666;"><span class="section-label-dot"></span> FRAMEWORK LIBRARY</div>
     <h2 class="section-title section-title--white">48 proven frameworks.<br>8 categories.</h2>
+    <p class="section-subtitle section-subtitle--dark">All frameworks are real, documented methodologies with proven track records. No AI-generated frameworks. Sources required. Validation mandatory.</p>
     <div class="categories-grid">
         <div class="category-card">
             <div class="category-header">
@@ -1172,6 +1210,24 @@ function closeMobileMenu() {
     </div>
 </section>
 
+<!-- Trust Bar -->
+<div class="stats-section">
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-value" style="font-size: 24px;">Apache 2.0</div>
+            <div class="stat-label">Open Source</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" style="font-size: 24px;">0 deps</div>
+            <div class="stat-label">No Dependencies</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" style="font-size: 24px;">Copy &amp; Paste</div>
+            <div class="stat-label">Installation</div>
+        </div>
+    </div>
+</div>
+
 <!-- Install -->
 <section class="section section--light" id="install">
     <div class="install-card">
@@ -1194,6 +1250,7 @@ function closeMobileMenu() {
 <!-- Final CTA -->
 <section class="final-cta">
     <div class="final-cta-geo"></div>
+    <div class="final-cta-geo-2"></div>
     <h2>Stop guessing.<br>Start thinking with structure.</h2>
     <p>48 frameworks. 3 skills. One prompt away.</p>
     <button class="btn btn--primary" style="border-color: #000;" onclick="copyInstallPrompt(this)">Copy install prompt</button>
