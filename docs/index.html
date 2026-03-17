@@ -3,923 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic Frameworks — 48 Proven Frameworks for Your AI Agent</title>
-    <meta name="description" content="Agent Skills for Claude AI. Choose, apply, and discover 48 proven strategic frameworks for decision-making, problem-solving, and strategic thinking.">
+    <title>Strategic Frameworks — The right framework for the right problem</title>
+    <meta name="description" content="48 proven strategic frameworks with AI-facilitated workshops. Choose, apply, and discover frameworks for any decision or problem.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-page: #FAFAFA;
-            --bg-dark: #000000;
-            --bg-card: #FFFFFF;
-            --text-primary: #000000;
-            --text-secondary: #777777;
-            --text-muted: #999999;
-            --text-on-dark: #FFFFFF;
-            --red: #E53935;
-            --blue: #1E88E5;
-            --green: #4CAF50;
-            --yellow: #FFC107;
-            --border: #000000;
-            --border-light: #EEEEEE;
-            --font-heading: 'Space Grotesk', sans-serif;
-            --font-mono: 'Space Mono', monospace;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: var(--font-heading);
-            background: var(--bg-page);
-            color: var(--text-primary);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        a { color: inherit; text-decoration: none; }
-
-        .container { max-width: 1440px; margin: 0 auto; padding: 0 120px; }
-        @media (max-width: 900px) { .container { padding: 0 24px; } }
-
-        /* ── Header ── */
-        header {
-            background: var(--bg-dark);
-            padding: 20px 64px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: var(--red);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--text-on-dark);
-            font-size: 16px;
-            font-family: var(--font-mono);
-        }
-        .logo-text {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 16px;
-            color: var(--text-on-dark);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
-        .header-nav a {
-            font-family: var(--font-mono);
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-on-dark);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .header-nav a:hover { color: var(--red); }
-        .header-cta {
-            padding: 10px 24px;
-            border: 2px solid var(--red);
-            color: var(--text-on-dark);
-            background: var(--red);
-            font-family: var(--font-mono);
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .header-cta:hover { background: transparent; }
-
-        /* ── Hero ── */
-        .hero {
-            background: var(--bg-dark);
-            padding: 96px 120px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-geo-1 {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: var(--red);
-            opacity: 0.15;
-            top: -80px;
-            right: -40px;
-        }
-        .hero-geo-2 {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: var(--blue);
-            opacity: 0.12;
-            top: 350px;
-            right: 200px;
-            transform: rotate(15deg);
-        }
-        .hero-geo-3 {
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            background: var(--yellow);
-            opacity: 0.1;
-            bottom: -60px;
-            left: -50px;
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        }
-        .hero-grid {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: start;
-        }
-        .hero-left { max-width: 700px; }
-        .hero-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            background: var(--red);
-            font-family: var(--font-mono);
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--text-on-dark);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 32px;
-        }
-        .hero h1 {
-            font-size: 56px;
-            font-weight: 700;
-            letter-spacing: -2px;
-            line-height: 1.1;
-            color: var(--text-on-dark);
-            margin-bottom: 24px;
-            max-width: 700px;
-        }
-        .hero h1 span { color: var(--red); }
-        .hero .tagline {
-            font-size: 20px;
-            color: #BBBBBB;
-            line-height: 1.5;
-            margin-bottom: 16px;
-            max-width: 650px;
-        }
-        .hero .agents {
-            font-family: var(--font-mono);
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 32px;
-            letter-spacing: 0.5px;
-        }
-        .hero .agents strong { color: var(--text-on-dark); }
-        .hero-cta {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        /* ── Command Dock ── */
-        .cmd-dock {
-            background: #111;
-            border: 2px solid #333;
-            overflow: hidden;
-        }
-        .cmd-dock-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 20px;
-            border-bottom: 2px solid #333;
-        }
-        .cmd-dock-title {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            font-weight: 700;
-            color: #666;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        .cmd-dock-body {
-            padding: 16px 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .cmd-card {
-            background: #0A0A0A;
-            border: 2px solid #222;
-            padding: 16px 20px;
-            cursor: pointer;
-            transition: border-color 0.15s;
-            position: relative;
-        }
-        .cmd-card:hover { border-color: var(--red); }
-        .cmd-card-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-        .cmd-card-label {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--red);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .cmd-card-copy {
-            font-family: var(--font-mono);
-            font-size: 10px;
-            color: #444;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.15s;
-        }
-        .cmd-card:hover .cmd-card-copy { color: #888; }
-        .cmd-card-copy.copied { color: var(--green); }
-        .cmd-card-desc {
-            font-size: 13px;
-            color: #888;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
-        .cmd-card-prompt {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            line-height: 1.6;
-            color: #BBB;
-            background: #111;
-            padding: 10px 12px;
-            border-left: 3px solid var(--red);
-            max-height: 60px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            font-family: var(--font-mono);
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border: 2px solid var(--border);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .btn--primary {
-            background: var(--text-on-dark);
-            color: var(--bg-dark);
-            border-color: var(--text-on-dark);
-        }
-        .btn--primary:hover { background: transparent; color: var(--text-on-dark); }
-        .btn--ghost {
-            background: transparent;
-            color: var(--text-on-dark);
-            border-color: #333;
-        }
-        .btn--ghost:hover { border-color: var(--text-on-dark); }
-        .btn--dark {
-            background: var(--bg-dark);
-            color: var(--text-on-dark);
-            border-color: var(--bg-dark);
-        }
-        .btn--dark:hover { background: #222; }
-        .btn--outline {
-            background: transparent;
-            color: var(--text-primary);
-            border-color: var(--border);
-        }
-        .btn--outline:hover { background: var(--bg-dark); color: var(--text-on-dark); }
-
-        /* ── Stats ── */
-        .stats-section {
-            background: var(--bg-card);
-            border-bottom: 2px solid var(--border-light);
-        }
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 0;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .stat {
-            flex: 1;
-            text-align: center;
-            padding: 40px 24px;
-            border-right: 2px solid var(--border-light);
-        }
-        .stat:last-child { border-right: none; }
-        .stat-value {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -1px;
-        }
-        .stat-label {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 4px;
-        }
-
-        /* ── Sections ── */
-        .section {
-            padding: 96px 120px;
-        }
-        .section--light { background: var(--bg-page); }
-        .section--white { background: var(--bg-card); border-top: 2px solid var(--border-light); border-bottom: 2px solid var(--border-light); }
-        .section--dark { background: var(--bg-dark); }
-        @media (max-width: 900px) { .section { padding: 64px 24px; } .hero { padding: 64px 24px; } }
-
-        .section-label {
-            font-family: var(--font-mono);
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .section-label-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--red);
-            display: inline-block;
-        }
-        .section-label--light { color: #666; }
-        .section-title {
-            font-size: 44px;
-            font-weight: 700;
-            letter-spacing: -2px;
-            line-height: 1.1;
-            margin-bottom: 48px;
-            max-width: 900px;
-        }
-        .section-subtitle {
-            font-size: 18px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            max-width: 800px;
-            margin-bottom: 48px;
-            margin-top: -24px;
-        }
-        .section-subtitle--dark {
-            color: #BBBBBB;
-        }
-        .section-title--white { color: var(--text-on-dark); }
-
-        /* ── Features grid ── */
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-        .feature {
-            padding: 32px;
-            border: 2px solid var(--border);
-            background: var(--bg-card);
-            transition: transform 0.15s;
-        }
-        .feature:hover { transform: translateY(-2px); }
-        .feature-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .feature-desc {
-            font-size: 16px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* ── Skills grid ── */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 12px;
-        }
-        .skill {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 20px;
-            border: 2px solid #333;
-            background: transparent;
-            color: var(--text-on-dark);
-            transition: border-color 0.15s, background 0.15s;
-        }
-        .skill:hover { border-color: var(--red); background: rgba(229, 57, 53, 0.08); }
-        .skill-icon {
-            flex-shrink: 0;
-            width: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .skill-icon svg {
-            width: 16px;
-            height: 16px;
-            text-align: center;
-        }
-        .skill-name {
-            font-family: var(--font-mono);
-            font-size: 13px;
-            color: var(--red);
-            font-weight: 700;
-        }
-        .skill-desc {
-            font-size: 13px;
-            color: #888;
-        }
-
-        /* ── Scenarios ── */
-        .scenarios-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-        }
-        .scenario-card {
-            background: var(--bg-card);
-            border: 2px solid var(--border);
-            padding: 32px;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.15s;
-        }
-        .scenario-card:hover { transform: translateY(-3px); }
-        .scenario-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-        }
-        .scenario-number {
-            font-family: var(--font-mono);
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--red);
-            letter-spacing: -1px;
-        }
-        .scenario-tag {
-            font-family: var(--font-mono);
-            font-size: 10px;
-            font-weight: 700;
-            color: var(--text-on-dark);
-            background: var(--bg-dark);
-            padding: 4px 10px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .scenario-title {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
-        }
-        .scenario-desc {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .scenario-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-        .scenario-step {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-        .step-num {
-            width: 22px;
-            height: 22px;
-            background: var(--bg-dark);
-            color: var(--text-on-dark);
-            font-family: var(--font-mono);
-            font-size: 11px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .scenario-prompt {
-            background: #F5F5F5;
-            border-left: 3px solid var(--red);
-            padding: 12px 14px;
-            margin-bottom: 16px;
-            flex-grow: 1;
-        }
-        .scenario-prompt-text {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            color: var(--text-muted);
-            line-height: 1.5;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .scenario-copy-btn {
-            width: 100%;
-            padding: 12px;
-            background: var(--bg-dark);
-            color: var(--text-on-dark);
-            border: 2px solid var(--bg-dark);
-            font-family: var(--font-mono);
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .scenario-copy-btn:hover { background: var(--red); border-color: var(--red); }
-        .scenario-copy-btn.copied { background: var(--green); border-color: var(--green); }
-
-        /* ── Framework categories ── */
-        .categories-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-        .category-card {
-            padding: 28px;
-            border: 2px solid #333;
-            background: transparent;
-            transition: border-color 0.15s;
-        }
-        .category-card:hover { border-color: var(--red); }
-        .category-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
-        }
-        .category-name {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text-on-dark);
-        }
-        .category-count {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--red);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .category-frameworks {
-            font-family: var(--font-mono);
-            font-size: 12px;
-            color: #888;
-            line-height: 1.6;
-        }
-
-        /* ── Install ── */
-        .install-card {
-            max-width: 720px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .install-card h2 {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 8px;
-        }
-        .install-card > p {
-            font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-        }
-        .install-code {
-            background: #111;
-            border: 2px solid #333;
-            padding: 24px;
-            text-align: left;
-            font-family: var(--font-mono);
-            font-size: 14px;
-            line-height: 2;
-            color: #AAA;
-            margin-bottom: 32px;
-            overflow-x: auto;
-        }
-        .install-code .prompt { color: var(--green); }
-        .install-code .comment { color: #555; }
-        .install-cta {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* ── Workflow ── */
-        .workflow {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0;
-            margin-bottom: 48px;
-            flex-wrap: wrap;
-        }
-        .workflow-step {
-            text-align: center;
-            padding: 24px 32px;
-        }
-        .workflow-step-icon {
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: center;
-        }
-        .workflow-step-icon svg {
-            width: 28px;
-            height: 28px;
-        }
-        .workflow-step-name {
-            font-family: var(--font-mono);
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: 1px;
-        }
-        .workflow-step-desc {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-top: 4px;
-        }
-        .workflow-arrow {
-            font-family: var(--font-mono);
-            font-size: 24px;
-            color: var(--red);
-            font-weight: 700;
-        }
-
-        /* ── Final CTA ── */
-        .final-cta {
-            background: var(--red);
-            padding: 96px 120px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .final-cta-geo {
-            position: absolute;
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            background: var(--bg-dark);
-            opacity: 0.08;
-            top: -100px;
-            right: -60px;
-        }
-        .final-cta-geo-2 {
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            background: var(--yellow);
-            opacity: 0.1;
-            bottom: -80px;
-            left: -80px;
-            transform: rotate(20deg);
-        }
-        .final-cta h2 {
-            font-size: 44px;
-            font-weight: 700;
-            letter-spacing: -2px;
-            line-height: 1.1;
-            color: var(--text-on-dark);
-            margin-bottom: 16px;
-            position: relative;
-            z-index: 1;
-        }
-        .final-cta p {
-            font-size: 18px;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 32px;
-            position: relative;
-            z-index: 1;
-        }
-        .final-cta .btn { position: relative; z-index: 1; }
-        @media (max-width: 900px) { .final-cta { padding: 64px 24px; } .final-cta h2 { font-size: 32px; } }
-
-        /* ── Footer ── */
-        footer {
-            background: var(--bg-dark);
-            padding: 48px 120px;
-        }
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 32px;
-        }
-        .footer-brand {
-            font-size: 14px;
-            color: #AAA;
-            line-height: 1.6;
-        }
-        .footer-brand strong {
-            color: var(--text-on-dark);
-            font-size: 16px;
-            display: block;
-            margin-bottom: 4px;
-        }
-        .footer-links {
-            display: flex;
-            gap: 48px;
-        }
-        .footer-link-group h4 {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            color: #666;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-        .footer-link-group a {
-            display: block;
-            font-size: 14px;
-            color: #AAA;
-            margin-bottom: 8px;
-            transition: color 0.15s;
-        }
-        .footer-link-group a:hover { color: var(--text-on-dark); }
-        .footer-divider {
-            height: 1px;
-            background: #333;
-            margin-bottom: 24px;
-        }
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .footer-bottom span {
-            font-family: var(--font-mono);
-            font-size: 11px;
-            color: #666;
-        }
-
-        /* ── Mobile menu ── */
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-on-dark);
-            font-size: 24px;
-            cursor: pointer;
-            padding: 4px 8px;
-        }
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--bg-dark);
-            border-top: 1px solid #333;
-            padding: 16px 24px;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 99;
-        }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a {
-            font-family: var(--font-mono);
-            font-size: 14px;
-            color: var(--text-on-dark);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 8px 0;
-        }
-        .mobile-menu a:hover { color: var(--red); }
-
-        @media (max-width: 900px) {
-            header { padding: 16px 24px; position: relative; }
-            .header-nav { display: none; }
-            .mobile-toggle { display: block; }
-            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-            .hero h1 { font-size: 36px; max-width: 100%; }
-            .section-title { font-size: 32px; }
-            .features, .skills-grid, .scenarios-grid, .categories-grid { grid-template-columns: 1fr; }
-            .stats { flex-direction: column; }
-            .stat { border-right: none; border-bottom: 2px solid var(--border-light); padding: 24px; }
-            .stat:last-child { border-bottom: none; }
-            footer { padding: 32px 24px; }
-            .footer-top { flex-direction: column; gap: 32px; }
-            .footer-links { gap: 32px; }
-            .footer-bottom { flex-direction: column; gap: 8px; }
-            .workflow { flex-direction: column; }
-            .workflow-arrow { transform: rotate(90deg); }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
 
-<!-- Header -->
 <header>
     <div class="logo">
         <div class="logo-icon">SF</div>
         <span class="logo-text">Strategic Frameworks</span>
     </div>
     <nav class="header-nav">
+        
+        <a href="#process">Process</a>
+        
+        <a href="#scenarios">Scenarios</a>
+        
         <a href="#skills">Skills</a>
-        <a href="#frameworks">48 Frameworks</a>
-        <a href="#scenarios">Use Cases</a>
+        
         <a href="#install">Install</a>
+        
         <a href="https://github.com/Przemocny/strategic-frameworks">GitHub</a>
         <button class="header-cta" onclick="copyInstallPrompt(this)">Copy install prompt</button>
     </nav>
     <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">&#9776;</button>
     <div class="mobile-menu" id="mobileMenu">
+        
+        <a href="#process" onclick="closeMobileMenu()">Process</a>
+        
+        <a href="#scenarios" onclick="closeMobileMenu()">Scenarios</a>
+        
         <a href="#skills" onclick="closeMobileMenu()">Skills</a>
-        <a href="#frameworks" onclick="closeMobileMenu()">48 Frameworks</a>
-        <a href="#scenarios" onclick="closeMobileMenu()">Use Cases</a>
+        
         <a href="#install" onclick="closeMobileMenu()">Install</a>
+        
         <a href="https://github.com/Przemocny/strategic-frameworks" onclick="closeMobileMenu()">GitHub</a>
         <button class="header-cta" style="width:100%;text-align:center;margin-top:8px;" onclick="copyInstallPrompt(this);closeMobileMenu()">Copy install prompt</button>
     </div>
 </header>
 
-<!-- Hero -->
 <section class="hero">
     <div class="hero-geo-1"></div>
     <div class="hero-geo-2"></div>
     <div class="hero-geo-3"></div>
     <div class="hero-grid">
         <div class="hero-left">
-            <div class="hero-badge">Claude Agent Skills</div>
-            <h1><span>48 Frameworks</span> for structured thinking.</h1>
-            <p class="tagline">Choose, apply, and discover proven strategic frameworks for decision-making, problem-solving, and strategic analysis &mdash; guided by AI.</p>
+            
+            <div class="hero-badge">Agent Skills</div>
+            
+            <h1><span>The right framework</span> for the right problem.</h1>
+            <p class="tagline">48 proven strategic frameworks with AI-facilitated workshops. Choose, apply, and discover frameworks for any decision or problem.</p>
+            
             <p class="agents">
-                Works with: <strong>Claude Code</strong> &middot; <strong>Claude Cowork</strong> &middot; <strong>Cursor</strong> &middot; <strong>Windsurf</strong> &middot; <strong>Antigravity</strong> &middot; <strong>Cline</strong> &middot; any terminal agent
+                Works with: <strong>Claude Code</strong> &middot; <strong>Claude Cowork</strong> &middot; <strong>OpenClaw</strong> &middot; <strong>Antygravity</strong> &middot; <strong>Cursor</strong> &middot; <strong>Cline</strong> &middot; <strong>any agent with skills</strong>
             </p>
+            
             <div class="hero-cta">
                 <a href="https://github.com/Przemocny/strategic-frameworks" class="btn btn--primary">GitHub Repo</a>
                 <a href="#install" class="btn btn--ghost">Install</a>
             </div>
+            <div class="trust-bar">
+                
+                <div class="trust-item">
+                    <div class="trust-dot trust-dot--green"></div>
+                    <span class="trust-text">48 proven frameworks</span>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-dot trust-dot--blue"></div>
+                    <span class="trust-text">AI-facilitated workshops</span>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-dot trust-dot--yellow"></div>
+                    <span class="trust-text">Open source MIT</span>
+                </div>
+                
+            </div>
         </div>
+        
         <div class="cmd-dock">
             <div class="cmd-dock-header">
-                <span class="cmd-dock-title">Prompts for AI</span>
+                <span class="cmd-dock-title">Quick start</span>
             </div>
             <div class="cmd-dock-body">
+                
                 <div class="cmd-card" onclick="copyCmd(this)">
                     <div class="cmd-card-top">
-                        <span class="cmd-card-label">Choose Framework</span>
+                        <span class="cmd-card-label">Install frameworks</span>
                         <span class="cmd-card-copy">Click to copy</span>
                     </div>
-                    <div class="cmd-card-desc">Describe your problem and get a matched framework recommendation.</div>
-                    <div class="cmd-card-prompt" data-prompt="I need help choosing the right strategic framework for my situation. I'm facing a complex decision about [describe your problem]. Help me select the best framework from the 48 available options by exploring my problem type, context, constraints, stakeholders, and goals. Use the /choose-framework skill.">I need help choosing the right strategic framework for my situation...</div>
+                    <div class="cmd-card-desc">Paste into your AI agent. 48 frameworks ready in 60 seconds.</div>
+                    <div class="cmd-card-prompt" data-prompt="Clone the repo https://github.com/Przemocny/strategic-frameworks.git into a temp directory. Copy all directories from skills/ into ~/.claude/skills/. Copy the frameworks/ directory to ~/.claude/skills/strategic-frameworks/frameworks/. Then remove the cloned temp directory. Confirm what was installed.">Clone the repo, copy skills/ and frameworks/ to ~/.claude/skills/, confirm...</div>
                 </div>
+                
                 <div class="cmd-card" onclick="copyCmd(this)">
                     <div class="cmd-card-top">
-                        <span class="cmd-card-label">Apply Framework</span>
+                        <span class="cmd-card-label">Choose a framework</span>
                         <span class="cmd-card-copy">Click to copy</span>
                     </div>
-                    <div class="cmd-card-desc">Walk through a framework step-by-step with facilitated workshop dialogue.</div>
-                    <div class="cmd-card-prompt" data-prompt="Let's apply a strategic framework to my problem. I want to use [Framework Name] to analyze [your situation]. Guide me through the framework step-by-step, ask facilitation questions, challenge my assumptions, and help me identify insights. Use the /use-framework skill.">Let's apply a strategic framework to my problem. Guide me step-by-step...</div>
+                    <div class="cmd-card-desc">Describe your situation. AI matches the right framework.</div>
+                    <div class="cmd-card-prompt" data-prompt="I have a strategic decision to make and need help choosing the right framework. Use /choose-framework to understand my situation through dialogue, then recommend 1-3 frameworks from the library with reasoning for each. Here is my situation:">Use /choose-framework: describe situation, get matched frameworks with reasoning...</div>
                 </div>
+                
                 <div class="cmd-card" onclick="copyCmd(this)">
                     <div class="cmd-card-top">
-                        <span class="cmd-card-label">Discover Framework</span>
+                        <span class="cmd-card-label">Run a workshop</span>
                         <span class="cmd-card-copy">Click to copy</span>
                     </div>
-                    <div class="cmd-card-desc">Research and add a new framework to the library.</div>
-                    <div class="cmd-card-prompt" data-prompt="I'd like to add a new framework to the Strategic Frameworks library. The framework is called [Framework Name]. Research it comprehensively, validate it against quality criteria, create a properly formatted framework file, and integrate it into the system. Use the /discover-framework skill.">I'd like to add a new framework to the library. Research and validate it...</div>
+                    <div class="cmd-card-desc">AI-facilitated step-by-step workshop for any framework.</div>
+                    <div class="cmd-card-prompt" data-prompt="I want to run a strategic workshop. Use /use-framework to facilitate a step-by-step session. Guide me through each phase of the framework with questions, challenges, and structured output. Save results to .frameworks-output/. The framework I want to use:">Use /use-framework: facilitated workshop, step by step, structured output...</div>
                 </div>
+                
             </div>
         </div>
+        
     </div>
 </section>
 
@@ -931,15 +133,10 @@ function copyCmd(card) {
     navigator.clipboard.writeText(text).then(function() {
         copyLabel.textContent = 'Copied!';
         copyLabel.classList.add('copied');
-        setTimeout(function() {
-            copyLabel.textContent = 'Click to copy';
-            copyLabel.classList.remove('copied');
-        }, 2000);
+        setTimeout(function() { copyLabel.textContent = 'Click to copy'; copyLabel.classList.remove('copied'); }, 2000);
     });
 }
-
-var INSTALL_PROMPT = 'Clone the repo https://github.com/Przemocny/strategic-frameworks.git to ~/Projects/strategic-frameworks (if the directory does not exist yet). Read README.md and AGENTS.md to understand how the project works. Copy all subdirectories from skills/ to ~/.claude/skills/ — each subdirectory should go directly into ~/.claude/skills/, so the structure looks like ~/.claude/skills/choose-framework/SKILL.md. Verify that the skills are available by checking ~/.claude/skills/ for choose-framework, use-framework, and discover-framework directories.';
-
+var INSTALL_PROMPT = "Clone the repo https://github.com/Przemocny/strategic-frameworks.git into a temp directory. Copy all directories from skills/ into ~/.claude/skills/. Copy the frameworks/ directory to ~/.claude/skills/strategic-frameworks/frameworks/. Then remove the cloned temp directory. Confirm what was installed.";
 function copyInstallPrompt(btn) {
     var originalText = btn.textContent;
     navigator.clipboard.writeText(INSTALL_PROMPT).then(function() {
@@ -947,361 +144,370 @@ function copyInstallPrompt(btn) {
         setTimeout(function() { btn.textContent = originalText; }, 2000);
     });
 }
-
 function copyScenario(btn) {
     var card = btn.closest('.scenario-card');
     var prompt = card.querySelector('.scenario-prompt').getAttribute('data-prompt');
     navigator.clipboard.writeText(prompt).then(function() {
         btn.textContent = 'Copied!';
         btn.classList.add('copied');
-        setTimeout(function() {
-            btn.textContent = 'Copy prompt';
-            btn.classList.remove('copied');
-        }, 2000);
+        setTimeout(function() { btn.textContent = 'Copy prompt'; btn.classList.remove('copied'); }, 2000);
     });
 }
-
-function toggleMobileMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-}
-
-function closeMobileMenu() {
-    document.getElementById('mobileMenu').classList.remove('open');
-}
+function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
 </script>
 
-<!-- Stats -->
 <div class="stats-section">
     <div class="stats">
+        
         <div class="stat">
             <div class="stat-value">48</div>
             <div class="stat-label">Frameworks</div>
         </div>
-        <div class="stat">
-            <div class="stat-value">3</div>
-            <div class="stat-label">AI Skills</div>
-        </div>
+        
         <div class="stat">
             <div class="stat-value">8</div>
             <div class="stat-label">Categories</div>
         </div>
+        
         <div class="stat">
-            <div class="stat-value">12 700</div>
-            <div class="stat-label">Lines of docs</div>
+            <div class="stat-value">3</div>
+            <div class="stat-label">Skills</div>
         </div>
+        
+        <div class="stat">
+            <div class="stat-value">MIT</div>
+            <div class="stat-label">License</div>
+        </div>
+        
     </div>
 </div>
 
-<!-- How It Works -->
-<section class="section section--light" id="workflow">
-    <div class="section-label"><span class="section-label-dot"></span> HOW IT WORKS</div>
-    <h2 class="section-title">Describe your problem.<br>Get structured insights.</h2>
-    <p class="section-subtitle">All three skills follow a facilitative 4-phase workflow. You bring context and judgment &mdash; the skill brings structure and questions.</p>
 
-    <div class="workflow">
-        <div class="workflow-step">
-            <div class="workflow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-            <div class="workflow-step-name">Describe problem</div>
-            <div class="workflow-step-desc">Tell the AI what you're facing</div>
-        </div>
-        <div class="workflow-arrow">&#8594;</div>
-        <div class="workflow-step">
-            <div class="workflow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-            <div class="workflow-step-name">choose-framework</div>
-            <div class="workflow-step-desc">10-20 min exploratory dialogue</div>
-        </div>
-        <div class="workflow-arrow">&#8594;</div>
-        <div class="workflow-step">
-            <div class="workflow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-            <div class="workflow-step-name">use-framework</div>
-            <div class="workflow-step-desc">30-60 min guided workshop</div>
-        </div>
-        <div class="workflow-arrow">&#8594;</div>
-        <div class="workflow-step">
-            <div class="workflow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
-            <div class="workflow-step-name">Insights</div>
-            <div class="workflow-step-desc">Documented recommendations</div>
-        </div>
+
+<section class="section section--dark" id="process">
+    <div class="section-label" style="color: var(--yellow);">
+        <span class="section-label-dot section-label-dot--tri"></span> THE APPROACH
     </div>
+    <h2 class="section-title section-title--white">Intuition doesn't scale.<br>Structure does.</h2>
 
-    <div class="features">
-        <div class="feature">
-            <div class="feature-title">Structured, not prescriptive</div>
-            <div class="feature-desc">Guide your thinking with proven structures. Insights emerge through systematic exploration, not prescriptive answers.</div>
+    <div class="steps-row">
+        
+        
+        <div class="step-card">
+            <div class="step-card-num" style="color: var(--red);">01</div>
+            <div class="step-card-title">Choose the right tool</div>
+            <div class="step-card-time" style="background: var(--red);">CHOOSE-FRAMEWORK</div>
+            <div class="step-card-desc">AI matches framework to your situation from 48 options. No more guessing or defaulting to SWOT.</div>
         </div>
-        <div class="feature">
-            <div class="feature-title">Evidence-based selection</div>
-            <div class="feature-desc">Match frameworks to situations based on proven criteria. No AI-generated frameworks. Only real, documented methodologies.</div>
+        
+        <div class="step-card">
+            <div class="step-card-num" style="color: var(--blue);">02</div>
+            <div class="step-card-title">Run the workshop</div>
+            <div class="step-card-time" style="background: var(--blue);">USE-FRAMEWORK</div>
+            <div class="step-card-desc">AI-facilitated step-by-step session with questions, challenges, and structured output.</div>
         </div>
-        <div class="feature">
-            <div class="feature-title">Natural dialogue</div>
-            <div class="feature-desc">Conversational workshop-style flow. The skill asks facilitation questions, challenges assumptions, and identifies patterns.</div>
+        
+        <div class="step-card">
+            <div class="step-card-num" style="color: var(--green);">03</div>
+            <div class="step-card-title">Expand the library</div>
+            <div class="step-card-time" style="background: var(--green);">DISCOVER-FRAMEWORK</div>
+            <div class="step-card-desc">Research, validate, and add new frameworks to the system through dialogue with AI.</div>
         </div>
-        <div class="feature">
-            <div class="feature-title">Community-driven</div>
-            <div class="feature-desc">Expandable library through discover-framework skill. Users can research and add new proven frameworks to the system.</div>
-        </div>
+        
     </div>
 </section>
 
-<!-- Skills -->
-<section class="section section--dark" id="skills">
-    <div class="section-label section-label--light" style="color: #666;"><span class="section-label-dot"></span> CORE SKILLS</div>
-    <h2 class="section-title section-title--white">3 skills. One system.<br>Structured thinking on demand.</h2>
-    <p class="section-subtitle section-subtitle--dark">Select the right framework, apply it through facilitated workshop dialogue, or research and add new frameworks to the library.</p>
-    <div class="skills-grid">
-        <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/choose-framework/SKILL.md">
-            <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-            <span><span class="skill-name">/choose-framework</span><br><span class="skill-desc">Select the right framework for your situation through exploratory dialogue</span></span>
-        </a>
-        <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/use-framework/SKILL.md">
-            <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
-            <span><span class="skill-name">/use-framework</span><br><span class="skill-desc">Apply framework step-by-step through facilitated workshop dialogue</span></span>
-        </a>
-        <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/discover-framework/SKILL.md">
-            <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
-            <span><span class="skill-name">/discover-framework</span><br><span class="skill-desc">Research and add new frameworks to the system</span></span>
-        </a>
-    </div>
-</section>
 
-<!-- Framework Library -->
-<section class="section section--dark" id="frameworks" style="padding-top: 0;">
-    <div class="section-label section-label--light" style="color: #666;"><span class="section-label-dot"></span> FRAMEWORK LIBRARY</div>
-    <h2 class="section-title section-title--white">48 proven frameworks.<br>8 categories.</h2>
-    <p class="section-subtitle section-subtitle--dark">All frameworks are real, documented methodologies with proven track records. No AI-generated frameworks. Sources required. Validation mandatory.</p>
-    <div class="categories-grid">
-        <div class="category-card">
-            <div class="category-header">
-                <span class="category-name">Mental Models</span>
-                <span class="category-count">7 frameworks</span>
-            </div>
-            <div class="category-frameworks">Munger's Mental Models, First Principles, Second-Order Thinking, Inversion, Circle of Competence, Systems Thinking, SEEDS Model</div>
-        </div>
-        <div class="category-card">
-            <div class="category-header">
-                <span class="category-name">Decision Making</span>
-                <span class="category-count">7 frameworks</span>
-            </div>
-            <div class="category-frameworks">OODA Loop, Cynefin Framework, Pre-Mortem Analysis, Regret Minimization, Eisenhower Matrix, Principled Negotiation, BATNA</div>
-        </div>
-        <div class="category-card">
-            <div class="category-header">
-                <span class="category-name">Business Strategy</span>
-                <span class="category-count">12 frameworks</span>
-            </div>
-            <div class="category-frameworks">Blue Ocean Strategy, Porter's Five Forces, SWOT, BCG Matrix, Ansoff Matrix, McKinsey 7S, Wardley Mapping, Business Model Canvas, Value Proposition Canvas, Lean Canvas, STP Model, Value Chain Analysis</div>
-        </div>
-        <div class="category-card">
-            <div class="category-header">
-                <span class="category-name">Product & Innovation</span>
-                <span class="category-count">10 frameworks</span>
-            </div>
-            <div class="category-frameworks">Jobs-to-be-Done, Design Thinking, Lean Startup, Six Thinking Hats, RICE, ICE Score, MoSCoW, Value vs Effort Matrix, Kano Model, AARRR Pirate Metrics</div>
-        </div>
-        <div class="category-card">
-            <div class="category-header">
-                <span class="category-name">Operations & Execution</span>
-                <span class="category-count">4 frameworks</span>
-            </div>
-            <div class="category-frameworks">Theory of Constraints, OKR Framework, Pareto Principle (80/20), RACE Framework</div>
-        </div>
-        <div class="category-card">
-            <div class="category-header">
-                <span class="category-name">Sales Methodologies</span>
-                <span class="category-count">3 frameworks</span>
-            </div>
-            <div class="category-frameworks">SPIN Selling, Challenger Sale, MEDDIC</div>
-        </div>
-        <div class="category-card">
-            <div class="category-header">
-                <span class="category-name">Change Management</span>
-                <span class="category-count">3 frameworks</span>
-            </div>
-            <div class="category-frameworks">Kotter's 8-Step Change Model, ADKAR Model, Lewin's Change Model</div>
-        </div>
-        <div class="category-card">
-            <div class="category-header">
-                <span class="category-name">Analysis & Planning</span>
-                <span class="category-count">3 frameworks</span>
-            </div>
-            <div class="category-frameworks">SWOT Analysis, Systems Thinking, Risk Management Frameworks</div>
-        </div>
-    </div>
-</section>
 
-<!-- Scenarios -->
+
 <section class="section section--light" id="scenarios">
-    <div class="section-label"><span class="section-label-dot"></span> USE CASES</div>
-    <h2 class="section-title">Copy the prompt.<br>Paste into your agent. Done.</h2>
+    <div class="section-label">
+        <span class="section-label-dot section-label-dot--square"></span> SCENARIOS
+    </div>
+    <h2 class="section-title">Copy the prompt.<br>Paste to your agent. Done.</h2>
 
     <div class="scenarios-grid">
-
+        
+        
         <div class="scenario-card">
             <div class="scenario-header">
-                <span class="scenario-number">01</span>
-                <span class="scenario-tag">Startup</span>
+                <span class="scenario-number scenario-number--red">01</span>
+                <span class="scenario-tag">Decision</span>
             </div>
-            <h3 class="scenario-title">Market entry strategy</h3>
-            <p class="scenario-desc">Analyze competitive landscape and find untapped market opportunities for your startup.</p>
-            <div class="scenario-steps">
-                <div class="scenario-step"><span class="step-num">1</span> Describe market & competitors</div>
-                <div class="scenario-step"><span class="step-num">2</span> AI selects Blue Ocean or Porter's</div>
-                <div class="scenario-step"><span class="step-num">3</span> Workshop through the framework</div>
-                <div class="scenario-step"><span class="step-num">4</span> Actionable strategy document</div>
+            <h3 class="scenario-title">Don&#39;t know which framework to use</h3>
+            <p class="scenario-desc">Startup considering entering a new market. You need structure for analysis.</p>
+            <div class="scenario-ba">
+                <div class="scenario-ba-row">
+                    <span class="scenario-ba-label scenario-ba-label--before">Before</span>
+                    <span>Google &quot;strategic framework for market entry&quot;, get 50 results, don&#39;t know which fits.</span>
+                </div>
+                <div class="scenario-ba-row">
+                    <span class="scenario-ba-label scenario-ba-label--after">After</span>
+                    <span>/choose-framework → dialogue about situation → AI recommends Blue Ocean + Ansoff with reasoning.</span>
+                </div>
             </div>
-            <div class="scenario-prompt" data-prompt="I'm a startup founder entering a competitive market. I need to develop a market entry strategy. My industry is [describe industry], my main competitors are [list competitors], and my key differentiator is [describe]. Help me choose between Blue Ocean Strategy and Porter's Five Forces (or suggest a better fit), then guide me through the framework step-by-step. Challenge my assumptions about the market. Output a structured strategy document with actionable recommendations.">
-                <span class="scenario-prompt-text">I'm a startup founder entering a competitive market. Help me choose and apply the right strategy framework...</span>
+            <div class="scenario-prompt" data-prompt="I have a strategic decision to make and need help choosing the right framework. Use /choose-framework to understand my situation through dialogue, then recommend 1-3 frameworks from the library with reasoning for each. Here is my situation:">
+                <span class="scenario-prompt-text">Use /choose-framework: describe situation, AI recommends matching frameworks...</span>
             </div>
             <button class="scenario-copy-btn" onclick="copyScenario(this)">Copy prompt</button>
         </div>
-
+        
         <div class="scenario-card">
             <div class="scenario-header">
-                <span class="scenario-number">02</span>
-                <span class="scenario-tag">Product</span>
+                <span class="scenario-number scenario-number--blue">02</span>
+                <span class="scenario-tag">Workshop</span>
             </div>
-            <h3 class="scenario-title">Feature prioritization</h3>
-            <p class="scenario-desc">Prioritize your backlog with a proven framework. Stop guessing, start deciding.</p>
-            <div class="scenario-steps">
-                <div class="scenario-step"><span class="step-num">1</span> List features & constraints</div>
-                <div class="scenario-step"><span class="step-num">2</span> AI selects RICE, ICE, or MoSCoW</div>
-                <div class="scenario-step"><span class="step-num">3</span> Score each feature systematically</div>
-                <div class="scenario-step"><span class="step-num">4</span> Prioritized roadmap</div>
+            <h3 class="scenario-title">Know the framework, not the process</h3>
+            <p class="scenario-desc">You want to run a Pre-Mortem Analysis before product launch.</p>
+            <div class="scenario-ba">
+                <div class="scenario-ba-row">
+                    <span class="scenario-ba-label scenario-ba-label--before">Before</span>
+                    <span>Read an article, take notes, skip key steps.</span>
+                </div>
+                <div class="scenario-ba-row">
+                    <span class="scenario-ba-label scenario-ba-label--after">After</span>
+                    <span>/use-framework → AI guides workshop question by question → structured output with insights and action items.</span>
+                </div>
             </div>
-            <div class="scenario-prompt" data-prompt="I'm a product manager with a growing backlog of features. I need to prioritize them systematically. I have [number] features, my team size is [size], and the main constraint is [time/resources/technical debt]. Help me choose the best prioritization framework — consider RICE, ICE Score, MoSCoW, Value vs Effort Matrix, or Kano Model. Then guide me through scoring each feature. I want a clear, justified priority order with reasoning.">
-                <span class="scenario-prompt-text">I'm a PM with a growing backlog. Help me choose a prioritization framework and score features...</span>
+            <div class="scenario-prompt" data-prompt="I want to run a strategic workshop. Use /use-framework to facilitate a step-by-step session. Guide me through each phase of the framework with questions, challenges, and structured output. Save results to .frameworks-output/. The framework I want to use:">
+                <span class="scenario-prompt-text">Use /use-framework: facilitated step-by-step workshop, structured output...</span>
             </div>
             <button class="scenario-copy-btn" onclick="copyScenario(this)">Copy prompt</button>
         </div>
-
+        
         <div class="scenario-card">
             <div class="scenario-header">
-                <span class="scenario-number">03</span>
-                <span class="scenario-tag">Leadership</span>
+                <span class="scenario-number scenario-number--yellow">03</span>
+                <span class="scenario-tag">Discovery</span>
             </div>
-            <h3 class="scenario-title">Complex decision under uncertainty</h3>
-            <p class="scenario-desc">Face a tough decision with structured thinking. Reduce bias, consider second-order effects.</p>
-            <div class="scenario-steps">
-                <div class="scenario-step"><span class="step-num">1</span> Describe decision & stakes</div>
-                <div class="scenario-step"><span class="step-num">2</span> AI selects Cynefin or Pre-Mortem</div>
-                <div class="scenario-step"><span class="step-num">3</span> Explore scenarios & risks</div>
-                <div class="scenario-step"><span class="step-num">4</span> Decision brief with confidence</div>
+            <h3 class="scenario-title">Need a framework that doesn&#39;t exist</h3>
+            <p class="scenario-desc">Your industry uses a specific framework that&#39;s not in the library.</p>
+            <div class="scenario-ba">
+                <div class="scenario-ba-row">
+                    <span class="scenario-ba-label scenario-ba-label--before">Before</span>
+                    <span>No option. Fall back to ad-hoc analysis.</span>
+                </div>
+                <div class="scenario-ba-row">
+                    <span class="scenario-ba-label scenario-ba-label--after">After</span>
+                    <span>/discover-framework → AI researches, validates sources, creates formatted file, integrates with system.</span>
+                </div>
             </div>
-            <div class="scenario-prompt" data-prompt="I'm facing a complex decision with high stakes and significant uncertainty. The decision is about [describe]. The main stakeholders are [list]. The timeline is [deadline]. The consequences of getting it wrong are [describe impact]. Help me choose the right decision-making framework — consider Cynefin, Pre-Mortem Analysis, Second-Order Thinking, or Regret Minimization. Then walk me through it systematically, challenge my assumptions, and help me see blind spots. I want a decision brief I can share with my team.">
-                <span class="scenario-prompt-text">I'm facing a complex decision with high stakes. Help me choose a decision framework and think clearly...</span>
+            <div class="scenario-prompt" data-prompt="I need a framework that&#39;s not in the current library. Use /discover-framework to research it: find authoritative sources, validate the methodology, create a formatted framework file following the existing conventions, and integrate it with the system. The framework I need:">
+                <span class="scenario-prompt-text">Use /discover-framework: research, validate, create formatted file, integrate...</span>
             </div>
             <button class="scenario-copy-btn" onclick="copyScenario(this)">Copy prompt</button>
         </div>
-
+        
     </div>
 </section>
 
-<!-- Philosophy -->
+
+
+
 <section class="section section--white">
-    <div class="section-label"><span class="section-label-dot"></span> PHILOSOPHY</div>
-    <h2 class="section-title">Frameworks are thinking tools,<br>not formulas for success.</h2>
+    <div class="section-label">
+        <span class="section-label-dot section-label-dot--square-blue"></span>
+        <span style="color: var(--blue);">WHY THIS WORKS</span>
+    </div>
+    <h2 class="section-title">Right tool, right problem.<br>Every time.</h2>
     <div class="features">
+        
         <div class="feature">
-            <div class="feature-title">The right framework for the right problem</div>
-            <div class="feature-desc">Strategic frameworks won't solve operational issues. Decision frameworks won't help with positioning. Matching matters.</div>
+            <div class="feature-title">Matching over defaulting</div>
+            <div class="feature-desc">AI matches framework to your situation. No more picking SWOT because it's the only one you know.</div>
         </div>
+        
         <div class="feature">
-            <div class="feature-title">Structure beats ad-hoc analysis</div>
-            <div class="feature-desc">Proven frameworks encode decades of experience. They provide structure, ensure completeness, and reduce blind spots.</div>
+            <div class="feature-title">Facilitation over reading</div>
+            <div class="feature-desc">Step-by-step workshops with AI asking the right questions. Theory becomes practice.</div>
         </div>
+        
         <div class="feature">
-            <div class="feature-title">Facilitative, not directive</div>
-            <div class="feature-desc">You bring context and judgment. The skill brings structure and questions. Together you create insights neither could alone.</div>
+            <div class="feature-title">Structured outputs</div>
+            <div class="feature-desc">Every workshop produces documented insights, decisions, and action items in <code>.frameworks-output/</code>.</div>
         </div>
+        
         <div class="feature">
-            <div class="feature-title">Evidence-based, not opinion</div>
-            <div class="feature-desc">All frameworks are real, documented methodologies with proven track records. No AI-generated frameworks. Sources required.</div>
+            <div class="feature-title">Expandable library</div>
+            <div class="feature-desc">48 frameworks today. Discover new ones through dialogue with AI. The library grows with your needs.</div>
         </div>
+        
     </div>
 </section>
 
-<!-- Trust Bar -->
-<div class="stats-section">
-    <div class="stats">
-        <div class="stat">
-            <div class="stat-value" style="font-size: 24px;">Apache 2.0</div>
-            <div class="stat-label">Open Source</div>
-        </div>
-        <div class="stat">
-            <div class="stat-value" style="font-size: 24px;">0 deps</div>
-            <div class="stat-label">No Dependencies</div>
-        </div>
-        <div class="stat">
-            <div class="stat-value" style="font-size: 24px;">Copy &amp; Paste</div>
-            <div class="stat-label">Installation</div>
-        </div>
-    </div>
-</div>
 
-<!-- Install -->
+
+
+<section class="section section--dark" id="skills">
+    <div class="section-label section-label--light" style="color: #666;">
+        <span class="section-label-dot section-label-dot--square"></span> 3 FRAMEWORK SKILLS
+    </div>
+    <h2 class="section-title section-title--white">Choose. Apply. Discover.<br>Paste and go.</h2>
+    <div class="skills-grid">
+        
+        <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/choose-framework/SKILL.md">
+            <span>
+                <span class="skill-name">/choose-framework</span><br>
+                <span class="skill-desc">AI matches framework to your situation</span>
+            </span>
+        </a>
+        
+        <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/use-framework/SKILL.md">
+            <span>
+                <span class="skill-name">/use-framework</span><br>
+                <span class="skill-desc">AI-facilitated step-by-step workshop</span>
+            </span>
+        </a>
+        
+        <a class="skill" href="https://github.com/Przemocny/strategic-frameworks/blob/main/skills/discover-framework/SKILL.md" style="grid-column: 1 / -1; max-width: calc(50% - 6px);">
+            <span>
+                <span class="skill-name">/discover-framework</span><br>
+                <span class="skill-desc">Research and add new frameworks</span>
+            </span>
+        </a>
+        
+    </div>
+</section>
+
+
+
+
+<section class="section section--light">
+    <div class="section-label">
+        <span class="section-label-dot section-label-dot--square"></span> THE PROBLEM
+    </div>
+    <h2 class="section-title">You make hundreds of decisions weekly.<br>Most are on <span style="color: var(--red);">gut feeling</span>.</h2>
+    <div class="ba-grid">
+        <div class="ba-header ba-header--before">Without frameworks</div>
+        <div class="ba-header ba-header--after">With frameworks</div>
+        
+        <div class="ba-row">
+            <div class="ba-cell ba-cell--before">&quot;Let&#39;s do a SWOT&quot; — because it&#39;s the only framework you know</div>
+            <div class="ba-cell ba-cell--after">AI matches framework to your specific problem from 48 options</div>
+        </div>
+        
+        <div class="ba-row">
+            <div class="ba-cell ba-cell--before">Know the framework in theory, can&#39;t run a workshop</div>
+            <div class="ba-cell ba-cell--after">AI facilitates step by step with questions and challenges</div>
+        </div>
+        
+        <div class="ba-row">
+            <div class="ba-cell ba-cell--before">&quot;There&#39;s no framework for this&quot; — improvise</div>
+            <div class="ba-cell ba-cell--after">/discover-framework researches and adds new ones to the system</div>
+        </div>
+        
+        <div class="ba-row">
+            <div class="ba-cell ba-cell--before">Same biases, same blind spots, same mistakes</div>
+            <div class="ba-cell ba-cell--after">Structured thinking surfaces what intuition misses</div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+<section class="section section--white">
+    <div class="section-label">
+        <span class="section-label-dot section-label-dot--circle"></span>
+        <span style="color: var(--green);">ECOSYSTEM</span>
+    </div>
+    <h2 class="section-title">Part of a bigger toolkit.</h2>
+    <div class="eco-grid">
+        
+        <a class="eco-card" href="https://github.com/Przemocny/agent-rituals">
+            <div class="eco-card-name">Agent Rituals</div>
+            <div class="eco-card-desc">7 workflow rituals that turn chaotic AI sessions into structured, repeatable work.</div>
+        </a>
+        
+        <a class="eco-card" href="https://github.com/Przemocny/critical-briefs">
+            <div class="eco-card-name">Critical Briefs</div>
+            <div class="eco-card-desc">Validate business ideas and stress-test processes through skeptical dialogue.</div>
+        </a>
+        
+        <a class="eco-card" href="https://github.com/Przemocny/generic-skills">
+            <div class="eco-card-name">Generic Skills</div>
+            <div class="eco-card-desc">Systematic research, skill creation, and persistent context management.</div>
+        </a>
+        
+        <a class="eco-card" href="https://github.com/Przemocny/strategic-frameworks">
+            <div class="eco-card-name">Strategic Frameworks</div>
+            <div class="eco-card-desc">48 proven frameworks for decisions with AI-facilitated workshops.</div>
+        </a>
+        
+    </div>
+</section>
+
 <section class="section section--light" id="install">
     <div class="install-card">
-        <div class="section-label" style="justify-content: center;"><span class="section-label-dot"></span> INSTALLATION</div>
-        <h2>Ready in 2 steps</h2>
-        <p>Clone and copy skills to your agent</p>
+        <div class="section-label" style="justify-content: center;">
+            <span class="section-label-dot section-label-dot--circle-red"></span> INSTALLATION
+        </div>
+        <h2>Ready in 60 seconds</h2>
+        <p>Claude Code or any compatible AI agent + Git</p>
         <div class="install-code">
-            <span class="comment"># Clone the repository</span><br>
-            <span class="prompt">$</span> git clone https://github.com/Przemocny/strategic-frameworks.git<br>
-            <span class="comment"># Copy skills to Claude Code</span><br>
-            <span class="prompt">$</span> cp -r strategic-frameworks/skills/* ~/.claude/skills/
+            <span class="comment"># Clone and install</span><br><span class="prompt">$</span> git clone https://github.com/Przemocny/strategic-frameworks.git<br><span class="prompt">$</span> cd strategic-frameworks && cp -r skills/* ~/.claude/skills/<br><span class="comment"># Copy frameworks library</span><br><span class="prompt">$</span> cp -r frameworks/ ~/.claude/skills/strategic-frameworks/frameworks/
         </div>
         <div class="install-cta">
             <a href="https://github.com/Przemocny/strategic-frameworks" class="btn btn--dark">GitHub Repo</a>
-            <a href="https://github.com/Przemocny/strategic-frameworks/blob/main/AGENTS.md" class="btn btn--outline">Read AGENTS.md</a>
+            
+            <a href="https://claude.com/claude-code" class="btn btn--outline">Claude Code</a>
+            
         </div>
     </div>
 </section>
 
-<!-- Final CTA -->
 <section class="final-cta">
     <div class="final-cta-geo"></div>
     <div class="final-cta-geo-2"></div>
-    <h2>Stop guessing.<br>Start thinking with structure.</h2>
-    <p>48 frameworks. 3 skills. One prompt away.</p>
-    <button class="btn btn--primary" style="border-color: #000;" onclick="copyInstallPrompt(this)">Copy install prompt</button>
+    <h2>Stop guessing.<br>Start your first workshop.</h2>
+    <button class="btn btn--dark" onclick="copyInstallPrompt(this)">Copy install prompt</button>
 </section>
 
-<!-- Footer -->
 <footer>
     <div style="max-width: 1200px; margin: 0 auto;">
         <div class="footer-top">
             <div class="footer-brand">
                 <strong>CampusAI</strong>
-                Strategic Frameworks &mdash; Agent Skills for Claude AI
+                Open-source Agent Skills for AI collaboration
             </div>
             <div class="footer-links">
                 <div class="footer-link-group">
                     <h4>Project</h4>
                     <a href="https://github.com/Przemocny/strategic-frameworks">GitHub</a>
                     <a href="https://github.com/Przemocny/strategic-frameworks/issues">Issues</a>
-                    <a href="https://github.com/Przemocny/strategic-frameworks/blob/main/LICENSE">Apache 2.0</a>
+                    <a href="https://github.com/Przemocny/strategic-frameworks/blob/main/LICENSE">MIT License</a>
                 </div>
                 <div class="footer-link-group">
-                    <h4>Resources</h4>
-                    <a href="https://github.com/Przemocny/strategic-frameworks/blob/main/AGENTS.md">AGENTS.md</a>
-                    <a href="https://github.com/Przemocny/strategic-frameworks/blob/main/.github/CONTRIBUTING.md">Contributing</a>
-                    <a href="https://agentskills.io">Agent Skills Spec</a>
+                    <h4>Ecosystem</h4>
+                    
+                    <a href="https://github.com/Przemocny/agent-rituals">Agent Rituals</a>
+                    
+                    <a href="https://github.com/Przemocny/critical-briefs">Critical Briefs</a>
+                    
+                    <a href="https://github.com/Przemocny/generic-skills">Generic Skills</a>
+                    
+                    <a href="https://github.com/Przemocny/strategic-frameworks">Strategic Frameworks</a>
+                    
                 </div>
                 <div class="footer-link-group">
                     <h4>Author</h4>
-                    <a href="https://campus.ai">CampusAI</a>
                     <a href="https://github.com/Przemocny/">GitHub</a>
+                    <a href="https://www.linkedin.com/in/pjozwiakowski/">LinkedIn</a>
                 </div>
             </div>
         </div>
         <div class="footer-divider"></div>
         <div class="footer-bottom">
-            <span>&copy; 2026 Strategic Frameworks. Apache 2.0 License.</span>
-            <span>Made by CampusAI</span>
+            <span>&copy; 2026 Strategic Frameworks. MIT License.</span>
+            <span>CampusAI</span>
         </div>
     </div>
 </footer>
 
+
+<script src="assets/main.js"></script>
 </body>
 </html>
